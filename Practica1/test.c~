@@ -1,0 +1,7 @@
+#include <stdio.h>
+#define gcd(A,B) B == 0 ? A : gcd (B,A%B);
+
+int main (int argc, char* args )
+{
+  printf ("%d", gcd( 47 , 12 ) );
+}

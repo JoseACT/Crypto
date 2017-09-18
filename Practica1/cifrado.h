@@ -1,0 +1,12 @@
+#ifndef BST_HEADER_FILE
+#define BST_HEADER_FILE
+#define MAX_SIZE 256
+
+void afin_encryption ( char * buffer , char m , int x );
+void afin_decryption ( char * buffer , char m , int x );
+void vigeniere_encryption ( char * buffer, char * key );
+void vigeniere_decyption ( char * buffer, char * key );
+void mezclado_encryption ( char * buffer , char key[MAX_SIZE]);
+void mezclado_decryption ( char * buffer , char key[MAX_SIZE]);
+
+#endif

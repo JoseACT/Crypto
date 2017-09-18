@@ -1,0 +1,4 @@
+#IFDEF
+#DEFINE VIGENERE_HEADERS
+unsigned int * frequency(char* texto)
+  

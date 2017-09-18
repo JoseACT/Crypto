@@ -1,0 +1,47 @@
+* Crypto 
+** Definiciones
+*** Cifrador por Bloques 
+    Es una funcion que mapea vecgtores de n-bits en vectores de n-bigts usando un parametro llamado llave
+    f: Kx Vn --> V n
+    Es un mapeo biyectivo
+**** Sea S1 = (M,C,K1,E1,D1) S2 = (M,C,K2,E2,D2)
+     2 criptosistemas endomorfos, i.e. M = C
+     Definimos al producto de S1 con S2 como
+     S1 x S2 = (M,M,K1xK2, E, D)
+     r <-- K1 x K2
+     e(k1,k2) = ek2(eK1(x))
+     d[k1,k2] (Y) = dk1(dk2(Y))
+     
+     S1 = { e k (x) = Kx mod n}
+     S2 = { e k (x) = K+k mod n }
+
+     k = (a,b) , a<-K2 , b<-k2
+     e[a,b] (X) = (( ax + ... + b) mod n )
+
+*** Una red de sustitucion-permutacion (SP)
+    
+    Es un cifrado producto de sustitucuones y permutaciones en varias fases.
+    Entrada -> 
+    [      bits       ]
+    s        s       s
+    [      bits       ]
+    s        s       s
+    [      bits       ]
+    
+*** Cifrador de bloque iterado
+
+    Es un cifrador que depende de una funcion ingterna llamad afucnion de ronda, trabaja en r rondas
+    r  >= 1, los parametros de la funcion son ri , una llave de ronda ki que es derivada de la llave k,
+    la funcion es una biyeccion
+    
+*** Cifrador de Feistel (Red de Feistel)
+    
+    Es un cifrador iterado cuya entrada es un bloque de tamanho 2t-bits divididos en 
+    (L0,R0) Li  y Ri de t-bits, el cifrado de (L0,R0) es (Rr, Lr) , r > 1
+    El mapeo para la ronda i ( Li - 1, Ri -1) -(ki)-> (Ri, Li)
+    Li = Ri-1, Ri = Li-1 XOR f(Ki,Ri-1)
+    
+    
+    
+    
+    
